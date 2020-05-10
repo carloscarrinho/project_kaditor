@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Rich Text</title>
+</head>
+
+<body onload="enableEditMode();">
+  <div class="container">
+
+    <h1>Kaditor</h1>
+
+    <div class="toolbar">
+      <button onclick="execCmd('undo')">
+        <img src="./assets/undo-24px.svg" />
+      </button>
+
+      <button onclick="execCmd('redo')">
+        <img src="./assets/redo-24px.svg" />
+      </button>
+
+      <label> <img src="./assets/font_download-24px.svg">
+        <select onclick="execCmdWithArgs('fontName', this.value)">
+          <option value="Arial">Arial</option>
+          <option value="Calibri">Calibri</option>
+          <option value="Century Gothic">Century Gothic</option>
+          <option value="Georgia">Georgia</option>
+          <option value="Helvetica">Helvetica</option>
+          <option value="Lucida Sans">Lucida Sans</option>
+          <option value="Tahoma">Tahoma</option>
+          <option value="Times New Romam">Times New Romam</option>
+          <option value="Trebuchet">Trebuchet</option>
+          <option value="Verdana">Verdana</option>
+        </select>
+      </label>
+
+      <label> <img src="./assets/format_size-24px.svg">
+        <select onclick="execCmdWithArgs('fontSize', this.value)">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+        </select>
+      </label>
+
+      <button onclick="execCmd('bold')">
+        <img src="./assets/format_bold-black-18dp.svg" />
+      </button>
+
+      <button onclick="execCmd('italic')">
+        <img src="./assets/format_italic-black-18dp.svg" />
+      </button>
+
+      <button onclick="execCmd('underline')">
+        <img src="./assets/format_underlined-black-18dp.svg" />
+      </button>
+
+      <button onclick="execCmd('strikethrough')">
+        <img src="./assets/format_strikethrough-black-18dp.svg" />
+      </button>
+
+      <button onclick="execCmd('justifyLeft')">
+        <img src="./assets/format_align_left-24px.svg" />
+      </button>
+
+      <button onclick="execCmd('justifyRight')">
+        <img src="./assets/format_align_right-24px.svg" />
+      </button>
+
+      <button onclick="execCmd('justifyCenter')">
+        <img src="./assets/format_align_center-24px.svg" />
+      </button>
+
+      <button onclick="execCmd('justifyFull')">
+        <img src="./assets/format_align_justify-24px.svg" />
+      </button>
+
+      <button onclick="execCmd('subscript')">
+        <img src="./assets/format_align_center-24px.svg" />
+      </button>
+
+      <button onclick="execCmd('superscript')">
+        <img src="./assets/format_align_justify-24px.svg" />
+      </button>
+
+      <button onclick="execCmd('indent')">
+        <img src="./assets/format_indent_increase-24px.svg" />
+      </button>
+
+      <button onclick="execCmd('outdent')">
+        <img src="./assets/format_indent_decrease-24px.svg" />
+      </button>
+
+      <button onclick="execCmdWithArgs('createLink', prompt('Enter a URL'))">
+        <img src="./assets/link-24px.svg" />
+      </button>
+    </div>
+
+  </div>
+  <iframe id="richTextField" name="richTextField"></iframe>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+/* general styles */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+html {
+  background-color: #eee;
+}
+
+.container {
+  background-color: #fff;
+
+  width: calc(100% - 200px);
+  margin: 0 100px;
+
+}
+  .container h1 {
+    font-size: 3em;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .container .toolbar {
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+    .container .toolbar button {
+      background-color: #eee;
+      border: 0;
+      border-radius: 2px;
+      height: 30px;
+      width: 30px;
+      cursor: pointer;
+      transition: background-color .2s;
+    }
+    .container .toolbar button:hover {
+      background-color: #aaa;
+    }
+    .container .toolbar button img {
+      width: 20px;
+      height: 30px;
+    }
+    .container .toolbar select {
+      background-color: black;
+      color: white;
+    }
+
+  iframe {
+    background-color: #fff;
+    width: calc(100% - 200px);
+    margin: 0 100px;
+    height: 450px;
+    border: 0;
+    padding: 18px;
+    line-height: 1.5em ;
+  }
